@@ -32,6 +32,9 @@ export default {
   */
   plugins: [
     '@/plugins/element-ui',
+    //引入自定义错误拦截
+    '@/plugins/axios.js',
+    //引入本地存储插件
     { src: '@/plugins/localStorage.js', ssr: false }
   ],
   /*

@@ -76,7 +76,7 @@ export default {
     this.$axios({
       url: "/scenics/banners"
     }).then(res => {
-      console.log(res.data.data);
+      // console.log(res.data.data);
       this.carouselArr = res.data.data;
     });
   }

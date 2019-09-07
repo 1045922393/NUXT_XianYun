@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>post</h1>
+    <h1>air</h1>
   </div>
 </template>
 

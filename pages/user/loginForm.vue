@@ -55,10 +55,10 @@ export default {
               this.$store.commit('user/changeuser',res.data)
               this.$router.push("/")
           })
-          .catch((err)=>{
-            console.dir(err)
-            this.$message.error(err.response.data.message)
-          })
+          // .catch((err)=>{
+          //   console.dir(err)
+          //   this.$message.error(err.response.data.message)
+          // })
         } else {
            this.$message.error('请填写信息')
         }

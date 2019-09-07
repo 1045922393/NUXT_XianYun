@@ -101,13 +101,12 @@ export default {
               this.$message.success("注册成功,正在跳转首页");
               this.$store.commit("user/changeuser", res.data);
               setTimeout(() => {
-                console.log(this)
                 this.$router.push("/");
               }, 1000);
             })
-            .catch(err => {
-              this.$message.error("服务器异常");
-            });
+            // .catch(err => {
+            //   this.$message.error("服务器异常");
+            // });
         } else {
           this.$message.error("请填写信息");
         }
