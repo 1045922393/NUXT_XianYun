@@ -202,7 +202,7 @@ export default {
         destCode,
         departDate
       } = this.form;
-      if (!(departCity && departCode && destCity && destCode && departDate)) {
+      if (!(departCity && destCity && departDate)) {
         this.$alert("请填写搜索条件", "错误", {
           type: "error"
         });
@@ -215,6 +215,7 @@ export default {
         return false;
       }
       this.form.departDate = moment(this.form.departDate).format("YYYY-MM-DD");
+      this.$store.commit("postsHistory/addHistory",this.form)
       this.$router.push({
         path: "/air/flights",
         query: this.form
