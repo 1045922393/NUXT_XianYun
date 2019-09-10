@@ -223,7 +223,7 @@ export default {
     },
     //tabChange切换栏
     tabChange(index) {
-      console.log(index);
+      // console.log(index);
       if (index === 1) {
         this.$alert("暂不支持返程,请使用单程", "告示", {
           type: "warning"
@@ -237,7 +237,7 @@ export default {
       method: "get"
     }).then(res => {
       this.saleArr = res.data.data;
-      console.log(res.data.data);
+      // console.log(res.data.data);
     });
   }
 };

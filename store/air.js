@@ -1,7 +1,9 @@
 export const state=()=>({
-    flightsData:{}
+    price:0
 })
 
 export const mutations={
-    
+    setPrice(state,price){
+        state.price=price
+    }
 }

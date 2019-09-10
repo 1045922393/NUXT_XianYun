@@ -145,6 +145,7 @@ export default {
           departDate: "",
           destCity: ""
         },
+        //  选择组件的数据来源
         options: {
           airport: [],
           company: [],

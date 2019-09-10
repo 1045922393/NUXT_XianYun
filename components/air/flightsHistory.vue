@@ -21,7 +21,7 @@
     </div>
     <div class="historys">
         <div class="title">
-            <span>历史查询</span>
+            <span>历史查询</span> <span @click="delHistory">删除历史</span>
         </div>
         <div class="list">
             <nuxt-link :to="`/air/flights?departCity=${item.departCity}&departCode=${item.departCode}&destCity=${item.destCity}&destCode=${item.destCode}&departDate=${item.departDate}`" class="oneHistory" v-for="(item,index) in historyArr" :key="index">
@@ -48,6 +48,12 @@ export default {
 
             }]
         }
+    },
+    methods:{
+      delHistory(){
+        this.$store.commit('postsHistory/clearHistory')
+        this.historyArr=this.$store.state.postsHistory.history
+      }
     },
     mounted(){
         this.historyArr=this.$store.state.postsHistory.history

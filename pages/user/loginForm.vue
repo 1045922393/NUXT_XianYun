@@ -53,7 +53,8 @@ export default {
           .then(res=>{
               this.$message.success(res.data.user.nickname+',欢迎回来')
               this.$store.commit('user/changeuser',res.data)
-              this.$router.push("/")
+              // 登陆成功后退回上页
+              this.$router.back()
           })
           // .catch((err)=>{
           //   console.dir(err)

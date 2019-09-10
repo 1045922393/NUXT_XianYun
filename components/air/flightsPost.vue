@@ -35,7 +35,7 @@
           </el-col>
           <el-col :span="4">
             <el-row class="choose">
-              <el-button type="warning" size="mini">选定</el-button>
+              <el-button type="warning" size="mini" @click="turnTo(item.id,value.seat_xid)">选定</el-button>
               <span>剩余：{{value.discount}}</span>
             </el-row>
           </el-col>
@@ -59,7 +59,10 @@ export default {
     };
   },
   methods: {
-   
+   turnTo(id,seat_xid){
+    //  点击路由跳转
+     this.$router.push(`/air/order?id=${id}&seat_xid=${seat_xid}`)
+   }
   }
 };
 </script>

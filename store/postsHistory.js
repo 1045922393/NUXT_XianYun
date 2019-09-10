@@ -5,5 +5,8 @@ export const state =()=>({
 export const mutations={
     addHistory(state,addObj){
         state.history.push(addObj)
+    },
+    clearHistory(state){
+        state.history.length=0
     }
 }
